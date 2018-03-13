@@ -1,17 +1,65 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+<ion-header class="bar bar-header bar-dark bar-positive">
+  <ion-navbar style="margin: 0; padding: 0;" hideBackButton>
+    <img src="assets/imgs/icon-head.png" (click)="aboutPush()" style="width: 100%; padding-top: 15px; margin-bottom: 0; padding-bottom: 0;">
+    <!--
+    <img src="assets/imgs/icon2.png" style="height: 50px;">
+    <img src="assets/imgs/icon3.png" style="height: 50px;">
+    -->
+    <!--
+    <ion-title>
+      
+    </ion-title>
+  -->
   </ion-navbar>
+  <!--
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  -->
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content> <!-- removed padding -->
+  
+  <!--
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+
+    </ion-refresher-content>
+  </ion-refresher>
+  -->
+  
+  <!--
+  <div style="height: 100%;"> 
+    <ion-list style="width: 100%; height: auto; background-color: #28273E;">
+        <ion-item-sliding *ngFor="let item of items">
+            <ion-item text-wrap style="background-color: #28273E; border: 5px solid #EEE8BA;">
+                <p style="color: #EEE8BA; font-size: 15px;">CLUE</p>
+                <p><strong style="color: #EEE8BA; font-size: 18px;">{{item}}</strong></p>
+            </ion-item>
+            <ion-item-options>
+              <button ion-button color="danger" (click)="removeItem(item)"><ion-icon name="trash"></ion-icon>Delete</button>
+            </ion-item-options>
+         
+          
+        </ion-item-sliding>
+    </ion-list>
+  </div>
+  -->
+  
+  <img src="assets/imgs/qr-scanner3.png" style="width: 88%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);">
+  <div *ngIf="results" style="width: 70%; height: auto; padding: 15px 10px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -65%);">
+    <h3 style="color: #EEE8BA; text-align: center;">CLUE</h3>
+    <h3 style="color: #EEE8BA; text-align: center;">{{results}}</h3>
+  </div>
+  <div>
+    <img src="assets/imgs/conquest.png" (click)="scannerPush()" style="width: 50%; position: fixed; left: 50%; bottom: 8%; transform: translate(-50%, -50%); margin: 0 auto;">
+  </div>
+  
+  <!--
+  <ion-list>
+    <ion-item *ngFor="let item of itemList; let i = index; trackBy: customTrackBy">
+      <ion-label stacked primary>An item</ion-label>
+      <ion-input type="text" [(ngModel)]="itemList[i]"></ion-input>
+    </ion-item>
+  </ion-list>
+-->
+
 </ion-content>

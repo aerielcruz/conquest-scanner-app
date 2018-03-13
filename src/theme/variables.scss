@@ -34,10 +34,10 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #28273E, // #488aff (blue), color of the tab when active/selected
   secondary:  #32db64,
   danger:     #f53d3d,
-  light:      #f4f4f4,
+  light:      #EEE8BA,
   dark:       #222
 );
 
@@ -53,7 +53,18 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+$tabs-md-tab-min-height: 5rem; //tabs height
+$toolbar-md-height: 5rem; //header height
+$toolbar-background: #EEE8BA; //#fff
+$tab-button-md-active-color: #28273E; // #f9f9f9
+$tabs-md-background: #EEE8BA; // #f9f9f9
+$tabs-ios-tab-icon-color: #EEE8BA;
+$tabs-ios-tab-icon-color-active: #EEE8BA;
 
+$list-md-border-color: #28273E;
+$item-md-body-text-font-size: 1.4rem;
+$list-md-padding-start: 50px;
+$list-md-margin-bottom: 20px;
 
 
 // App Windows Variables
@@ -84,5 +95,14 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+//@import "roboto";
+//@import "noto-sans";
+
+$font-family-md-base: "DisposableDroid BB";
+$font-family-ios-base: "DisposableDroid BB";
+$font-family-wp-base: "DisposableDroid BB";
+
+// Added this for qrscanner
+$background-color: transparent; //transparent
+
+$toolbar-ios-title-text-align: center;

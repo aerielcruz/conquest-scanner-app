@@ -11,6 +11,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Camera } from '@ionic-native/camera';
+import { QRScanner } from '@ionic-native/qr-scanner';
+import { IonicStorageModule } from '@ionic/storage';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+
+import {NgPipesModule} from 'ngx-pipes';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -21,7 +29,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    NgPipesModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,6 +44,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+    QRScanner,
+    SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

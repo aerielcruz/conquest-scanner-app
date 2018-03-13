@@ -14,3 +14,28 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.label-md {
+  margin: 13px 8px 13px 0;
+}
+
+ion-label {
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@font-face {
+  font-family: "DisposableDroid BB";
+  src: url("../assets/DisposableDroidBB_bld.ttf") format("truetype"),
+       url("../assets/DisposableDroidBB_bldital.ttf") format("truetype"),
+       url("../assets/DisposableDroidBB_ital.ttf") format("truetype"),
+       url("../assets/DisposableDroidBB.ttf") format("truetype");
+}
