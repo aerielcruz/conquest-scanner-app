@@ -14,7 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
 import { QRScanner } from '@ionic-native/qr-scanner';
 import { IonicStorageModule } from '@ionic/storage';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+import { SQLite } from '@ionic-native/sqlite';
 
 import {NgPipesModule} from 'ngx-pipes';
 

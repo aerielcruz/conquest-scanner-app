@@ -2,11 +2,8 @@ import { Component, NgZone } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Storage } from '@ionic/storage';
 import { Events } from 'ionic-angular';
-
-import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-about',

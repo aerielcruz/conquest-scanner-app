@@ -1,11 +1,8 @@
-import { Component, Pipe, PipeTransform, NgZone, ViewChild, ApplicationRef } from '@angular/core';
+import { Component, ViewChild, ApplicationRef } from '@angular/core';
 import { NavController, Content, List } from 'ionic-angular';
 import { Platform, NavParams } from 'ionic-angular';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Storage } from '@ionic/storage';
 import { Events } from 'ionic-angular';
-
-import { NgPipesModule } from 'ngx-pipes'; //pipe to use "reverse" for the array
 
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
@@ -16,7 +13,7 @@ import { ContactPage } from '../contact/contact';
   templateUrl: 'home.html'
 })
 
-export class HomePage{ //added "implements PipeTransform"
+export class HomePage{ 
 
 
   @ViewChild(Content) content: Content;
@@ -29,7 +26,7 @@ export class HomePage{ //added "implements PipeTransform"
   refresher: any;
   results: {};
 
-  constructor(private storage: Storage, public navCtrl: NavController, private platform: Platform, public navParams: NavParams, private ref: ApplicationRef, public events: Events) {
+  constructor(private storage: Storage, public navCtrl: NavController, private platform: Platform, public navParams: NavParams, public events: Events) {
 
 
   	this.platform.ready().then(() => {

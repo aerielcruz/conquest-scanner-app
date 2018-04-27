@@ -6,9 +6,9 @@ import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 
-import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
+import { QRScanner } from '@ionic-native/qr-scanner';
 import { Storage } from '@ionic/storage';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+import { SQLite } from '@ionic-native/sqlite';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -24,7 +24,7 @@ export class TabsPage {
 
   thisPage = 0;
 
-  constructor(private qrScanner: QRScanner, public navCtrl: NavController, public viewCtrl: ViewController, public appCtrl: App, private storage: Storage, private platform: Platform, private sqlite: SQLite, public navParams: NavParams, private zone: NgZone, private ref: ApplicationRef) {
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController, public appCtrl: App, public navParams: NavParams, private ref: ApplicationRef) {
 	
   }
 
