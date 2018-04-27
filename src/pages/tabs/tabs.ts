@@ -1,14 +1,10 @@
-import { Component, NgZone, ViewChild, ApplicationRef } from '@angular/core';
+import { Component, ViewChild, ApplicationRef } from '@angular/core';
 import { App, ViewController, NavController } from 'ionic-angular';
-import { Platform, NavParams, Content } from 'ionic-angular';
+import { NavParams, Content } from 'ionic-angular';
 
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
-
-import { QRScanner } from '@ionic-native/qr-scanner';
-import { Storage } from '@ionic/storage';
-import { SQLite } from '@ionic-native/sqlite';
 
 @Component({
   templateUrl: 'tabs.html'

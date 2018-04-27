@@ -1,4 +1,4 @@
-import { Component, ViewChild, ApplicationRef } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, Content, List } from 'ionic-angular';
 import { Platform, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
